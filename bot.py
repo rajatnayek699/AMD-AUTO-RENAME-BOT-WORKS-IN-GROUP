@@ -24,37 +24,7 @@ import motor.motor_asyncio
 from pyrogram import Client, filters, __version__, idle
 from pyrogram.types import (
     Message, InlineKeyboardButton, InlineKeyboardMarkup, 
-    CallbackQuery
-)
-
-
-# ==================== RENDER COMPATIBILITY ====================
-# Create directories with proper permissions
-import os
-os.makedirs("downloads", exist_ok=True)
-os.makedirs("temp", exist_ok=True)
-
-# Set proper file permissions
-os.chmod("downloads", 0o777)
-os.chmod("temp", 0o777)
-
-# Check for ffmpeg
-import subprocess
-try:
-    result = subprocess.run(['ffmpeg', '-version'], capture_output=True, text=True, check=True)
-    print("✅ FFmpeg is installed")
-except:
-    print("❌ FFmpeg not found, trying to install...")
-    try:
-        subprocess.run(['apt-get', 'update'], check=True)
-        subprocess.run(['apt-get', 'install', '-y', 'ffmpeg'], check=True)
-        print("✅ FFmpeg installed successfully")
-    except Exception as e:
-        print(f"❌ Failed to install ffmpeg: {e}")
-
-
-
-
+    C
 
 
 # Load environment variables
