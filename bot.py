@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 """
 Auto Rename Bot - Queue System Version
@@ -24,8 +25,8 @@ import motor.motor_asyncio
 from pyrogram import Client, filters, __version__, idle
 from pyrogram.types import (
     Message, InlineKeyboardButton, InlineKeyboardMarkup, 
-    C
-
+    CallbackQuery
+)
 
 # Load environment variables
 load_dotenv()
