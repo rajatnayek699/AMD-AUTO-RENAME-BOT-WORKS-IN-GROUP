@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: auto-rename-bot
+    restart: unless-stopped
+    volumes:
+      - ./downloads:/app/downloads
+      - ./temp:/app/temp
+      - ./.env:/app/.env
+    environment:
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - ADMIN=${ADMIN}
+      - DB_URL=${DB_URL}
+      - DB_NAME=${DB_NAME}
+      - LOG_CHANNEL=${LOG_CHANNEL}
+      - START_PIC=${START_PIC}
+      - WEBHOOK=${WEBHOOK}
+      - PORT=${PORT}
